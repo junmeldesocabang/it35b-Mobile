@@ -1,34 +1,40 @@
 import React from 'react';
-import React from 'react';
-import { IonContent, IonFab, IonFabButton, IonFabList, IonHeader, IonIcon, IonTitle, IonToolbar } from '@ionic/react';
 import {
-  chevronDownCircle,
-  chevronForwardCircle,
+  IonContent,
+  IonFab,
+  IonFabButton,
+  IonFabList,
+  IonIcon,
+} from '@ionic/react';
+import {
   chevronUpCircle,
   colorPalette,
   document,
   globe,
 } from 'ionicons/icons';
-interface ContainerProps { }
+
+interface ContainerProps {}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
-       <IonFab slot="fixed" vertical="bottom" horizontal="end">
+    <IonContent fullscreen>
+      <IonFab slot="fixed" vertical="bottom" horizontal="end">
+        <IonFabButton>
+          <IonIcon icon={chevronUpCircle} />
+        </IonFabButton>
+        <IonFabList side="top">
           <IonFabButton>
-            <IonIcon icon={chevronUpCircle}></IonIcon>
+            <IonIcon icon={document} />
           </IonFabButton>
-          <IonFabList side="top">
-            <IonFabButton>
-              <IonIcon icon={document}></IonIcon>
-            </IonFabButton>
-            <IonFabButton>
-              <IonIcon icon={colorPalette}></IonIcon>
-            </IonFabButton>
-            <IonFabButton>
-              <IonIcon icon={globe}></IonIcon>
-            </IonFabButton>
-          </IonFabList>
-        </IonFab>
+          <IonFabButton>
+            <IonIcon icon={colorPalette} />
+          </IonFabButton>
+          <IonFabButton>
+            <IonIcon icon={globe} />
+          </IonFabButton>
+        </IonFabList>
+      </IonFab>
+    </IonContent>
   );
 };
 

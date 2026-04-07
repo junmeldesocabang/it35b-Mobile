@@ -1,80 +1,25 @@
-import React from 'react';
-import {
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  IonFab,
-  IonFabButton,
-  IonFabList,
-  IonIcon,
-  IonMenu,
-  IonButtons,
-  IonMenuButton
-} from '@ionic/react';
-
-import {
-  chevronUpCircle,
-  document,
-  colorPalette,
-  globe
-} from 'ionicons/icons';
-
+import { IonContent, IonHeader, IonMenuButton, IonPage, IonProgressBar, IonTitle, IonToolbar } from '@ionic/react';
+import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
-    <>
-     
-      <IonMenu contentId="main-content">
-        <IonHeader>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonMenuButton slot="start" />
+          <IonTitle>Blank</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle>Menu Content</IonTitle>
+            <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent className="ion-padding">
-       
-        </IonContent>
-      </IonMenu>
-
-    
-      <IonPage id="main-content">
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton />
-            </IonButtons>
-            <IonTitle>Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
-        <IonContent className="ion-padding">
-
-          
-
-         
-          <IonFab slot="fixed" vertical="bottom" horizontal="end">
-            <IonFabButton>
-              <IonIcon icon={chevronUpCircle} />
-            </IonFabButton>
-
-            <IonFabList side="top">
-              <IonFabButton>
-                <IonIcon icon={document} />
-              </IonFabButton>
-              <IonFabButton>
-                <IonIcon icon={colorPalette} />
-              </IonFabButton>
-              <IonFabButton>
-                <IonIcon icon={globe} />
-              </IonFabButton>
-            </IonFabList>
-          </IonFab>
-
-        </IonContent>
-      </IonPage>
-    </>
+        <ExploreContainer />      
+      </IonContent>
+    </IonPage>
   );
 };
 

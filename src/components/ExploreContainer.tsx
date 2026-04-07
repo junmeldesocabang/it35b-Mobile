@@ -7,8 +7,7 @@ interface ContainerProps {}
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
     <>
-      <IonButton>Add</IonButton>
-      <IonButton>Delete</IonButton>
+       <IonButton>Refresh</IonButton>
     </>
   );
 };

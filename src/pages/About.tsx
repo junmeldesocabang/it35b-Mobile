@@ -36,7 +36,7 @@ const About : React.FC = () => {
 
             <IonContent fullscreen> 
 
-                <h1>Hi! ako diay si Junmel</h1>
+                <h1>Aray ko!!</h1>
             </IonContent>
 
 

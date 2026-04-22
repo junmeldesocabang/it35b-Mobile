@@ -1,55 +1,25 @@
-// Declaration imports
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar } from "@ionic/react";
 
-import { 
-    IonButtons, 
-    IonContent, 
-    IonHeader, 
-    IonMenuButton, 
-    IonPage, 
-    IonTitle, 
-    IonToolbar } 
-from "@ionic/react";
-
-
-const Favorites : React.FC = () => {
-
-    return (
-
+const Favorite:React.FC = () => {
+    return(
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-
                     <IonButtons slot="start">
+                        <IonMenuButton>
 
-                        <IonMenuButton></IonMenuButton>
-                    </IonButtons> 
-
-                    <IonTitle>
-                        Template
-
-                    </IonTitle>
-
-
-                  
+                        </IonMenuButton>
+                    </IonButtons>
                 </IonToolbar>
             </IonHeader>
 
-            <IonContent fullscreen> 
-
-                <h1>Template</h1>
+            <IonContent fullscreen>
+                <h1>Favorite</h1>
             </IonContent>
-
-
         </IonPage>
-
 
     );
 
-
 };
 
-export default Favorites;
-
-// logic
-
-// render ui
+export default Favorite;
